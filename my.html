@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: rgba(245, 245, 245, 1);
+        }
+
+        .container {
+            width: 375px;
+            height: 100%;
+            /*background-color: red;*/
+            margin: 0 auto;
+            /*设置背景图片*/
+            background-image: url("./img/bg3.png"), url("./img/bg2.png"), url("./img/bg1.png");
+            /*设置图片重复方式*/
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            /*设置图片位置*/
+            background-position: -142px -30px, -3px -30px, 0 -57px;
+            float: left;
+        }
+        .clock{
+            margin-left: 10px;
+        }
+        .ll{
+            margin-top: -20px;
+            margin-left: 300px;
+        }
+        .wifi{
+            margin-top: -20px;
+            margin-left: 325px;
+        }
+        .battery{
+            margin-top: -20px;
+            margin-left: 345px;
+        }
+        .setting{
+            /* margin-top: 60px;
+            margin-left: 330px;
+            height: 20.62px;
+            opacity: 1; */
+
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            
+        }
+        .userHeader{
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        h1{
+            opacity: 1;
+            /** 文本1 */
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 23.44px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            vertical-align: top;
+            margin: 9px 0 4px 0;
+        }
+        h2{
+            height: 12px;
+            opacity: 1;
+            /** 文本1 */
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 11.72px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            vertical-align: top;
+
+        }
+        h3{
+            text-align: center;
+            position: relative;
+            line-height: 60px;
+            color: rgba(255, 255, 255, 1);
+            font-size: 18px;
+        }
+        .edit1{
+            margin-top: -18px;
+            margin-left: 100px;
+        }
+        .edit2{
+            margin-top: -26px;
+            margin-left: 106px;
+        }
+        .mokuai1{
+            margin-left: 15px;
+        }
+        .f1{
+            color: rgba(255, 255, 255, 1);
+            margin-top: -90px;
+            margin-left: 40px;
+            font-size: 15px;
+        }
+        .f2{
+            color: white;
+            font-size: 20px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .x1{
+            font-size: xx-large;
+            color: aliceblue;
+            margin-left: 82px;
+            margin-top: -50px;
+        }
+        .f3{
+            color: rgba(255, 255, 255, 1);
+            margin-top: -49px;
+            margin-left: 100px;
+            font-size: 15px;
+        }
+        .f4{
+            color: white;
+            font-size: 20px;
+            margin-left: 119px;
+            margin-top: 10px;
+        }
+        .x2{
+            font-size: xx-large;
+            color: aliceblue;
+            margin-left: 154px;
+            margin-top: -50px;
+        }
+        .f5{
+            color: rgba(255, 255, 255, 1);
+            margin-top: -48px;
+            margin-left: 170px;
+            font-size: 15px;
+        }
+        .f6{
+            color: white;
+            font-size: 20px;
+            margin-left: 190px;
+            margin-top: 10px;
+        }
+        .x3{
+            font-size: xx-large;
+            color: aliceblue;
+            margin-left: 224px;
+            margin-top: -50px;
+        }
+        .f7{
+            color: rgba(255, 255, 255, 1);
+            margin-top: -48px;
+            margin-left: 240px;
+            font-size: 15px;
+        }
+        .f8{
+            color: white;
+            font-size: 20px;
+            margin-left: 252px;
+            margin-top: 8px;
+        }
+        .x4{
+            font-size: xx-large;
+            color: aliceblue;
+            margin-left: 295px;
+            margin-top: -50px;
+        }
+        .f9{
+            color: rgba(255, 255, 255, 1);
+            margin-top: -33px;
+            margin-left: 310px;
+            font-size: 16px;
+        }
+        .way{
+            margin-top: 140px;
+        }
+        .Service{
+            margin-top: -90px;
+            margin-left: 16px;
+        }
+        .service{
+            margin-top: -62px;
+            margin-left: 30px;
+        }
+        .arrow1{
+            margin-top: -20px;
+            margin-left: 300px;
+        }
+        h4{
+            color: rgba(255, 108, 114, 1);
+            margin-top: -30px;
+            margin-left: 90px;
+            font-size: 15px;
+        }
+        .Pay{
+            margin-top: 40px;
+            margin-left: 16px;
+        }
+        .pay{
+            margin-top: -62px;
+            margin-left: 30px;
+        }
+        .arrow2{
+            margin-top: -20px;
+            margin-left: 300px;
+        }
+        .Yhk{
+            margin-top: 40px;
+            margin-left: 16px;
+        }
+        .yhk{
+            margin-top: -62px;
+            margin-left: 30px;
+        }
+        .arrow3{
+            margin-top: -20px;
+            margin-left: 300px;
+        }
+        .Sz{
+            margin-top: 40px;
+            margin-left: 16px;
+        }
+        .sz{
+            margin-top: -62px;
+            margin-left: 30px;
+        }
+        .arrow4{
+            margin-top: -25px;
+            margin-left: 300px;
+        }
+
+        
+
+        .bottom-navigation{
+            width: 375px;
+            height: 104px;
+
+            position: fixed;
+            bottom: 0;
+            left: 0;
+
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: space-around;
+
+            /*background-color: yellow;*/
+            background-image: url("./img/navBg.png");
+            background-position: -30px 17px;
+            background-repeat: no-repeat;
+        }
+        .bottom-navigation .item{
+            width: 52px;
+            height: 52px;
+            /*background-color: blue;*/
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottom-navigation .item img{
+            width: 22px;
+            height: 22px;
+        }
+
+        .bottom-navigation .item span{
+            margin-top: 4px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .bottom-navigation .item-center{
+            /*background: blue;*/
+            border-radius: 50%;
+            /*相对定位, 相对于当前的位置*/
+            position: relative;
+            top: -50px;
+            background-image: url("./img/navCircle.png");
+
+            width: 70px;
+            height: 70px;
+            background-size: 70px 70px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="clock"><img src="./img/clock.png" alt=""></div>
+    <div class="ll"><img src="./img/ll.png" alt=""></div>
+    <div class="wifi"><img src="./img/wifi.png" alt=""></div>
+    <div class="battery"><img src="./img/Battery.png" alt=""></div>
+    <h3>我的页面<img class="setting" src="./img/setting3.png" alt=""></h3>
+    <div class="userHeader">
+        <img src="./img/userHeader.png" alt="">
+        <h1>CYD</h1>
+        <h2>点击编辑个人签名</h2>
+        <div class="edit1">
+            <img src="./img/edit.png" alt="">
+        </div>
+        <div class="edit2">
+            <img src="./img/edit2.png" alt="">
+        </div>
+    </div>
+    <div class="information">
+        <div class="mokuai1"><img src="./img/mokuai1.png" alt=""></div>
+        <div class="f1">粉丝</div>
+        <div class="f2">1145</div>
+        <div class="x1">|</div>
+        <div class="f3">待发货</div>
+        <div class="f4">2</div>
+        <div class="x2">|</div>
+        <div class="f5">待收货</div>
+        <div class="f6">6</div>
+        <div class="x3">|</div>
+        <div class="f7">待评价</div>
+        <div class="f8">12</div>
+        <div class="x4">|</div>
+        <div class="f9">售后</div>
+    </div>
+    <div class="way">
+        <div class="Service">
+            <img src="./img/bg.png" alt="">
+            <div class="service">
+                <img src="./img/service.png" alt="">
+            </div>
+            <h4>在线客服</h4>
+            <div class="arrow1">
+                <img src="./img/arrowRight.png" alt="">
+            </div>
+        </div>
+        <div class="Pay">
+            <img src="./img/bg.png" alt="">
+            <div class="pay">
+                <img src="./img/dk.png" alt="">
+            </div>
+            <h4>分期付款</h4>
+            <div class="arrow2">
+                <img src="./img/arrowRight.png" alt="">
+            </div>
+        </div>
+        <div class="Yhk">
+            <img src="./img/bg.png" alt="">
+            <div class="yhk">
+                <img src="./img/yhk.png" alt="">
+            </div>
+            <h4>绑定银行卡</h4>
+            <div class="arrow3">
+                <img src="./img/arrowRight.png" alt="">
+            </div>
+        </div>
+        <div class="Sz">
+            <img src="./img/bg.png" alt="">
+            <div class="yhk">
+                <img src="./img/sz.png" alt="">
+            </div>
+            <h4>支付明细</h4>
+            <div class="arrow4">
+                <img src="./img/arrowRight.png" alt="">
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="bottom-navigation">
+        <div class="item">
+            <img src="./img/home.png" alt="">
+            <span>首页</span>
+        </div>
+        <div class="item">
+            <img src="./img/sort.png" alt="">
+            <span>分类</span>
+        </div>
+        <div class="item item-center">
+<!--            <img src="./img/home.png" alt="">-->
+            <!-- <span>首页</span> -->
+        </div>
+        <div class="item">
+            <img src="./img/talk.png" alt="">
+            <span>论坛</span>
+        </div>
+        <div class="item">
+            <img src="./img/mine.png" alt="">
+            <span>我的</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

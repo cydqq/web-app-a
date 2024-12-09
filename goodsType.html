@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 375px;
+            height: 1000px;
+            /*border: 1px solid red;*/
+        }
+
+        .head {
+            height: 50px;
+            /*background-color: yellow;*/
+            position: relative;
+
+        }
+
+        .head h2 {
+            text-align: center;
+            color: rgba(255, 108, 114, 1);
+            font-size: 18px;
+            font-weight: 500;
+            /*设置行高 = 容器的高度. 实现文字垂直居中*/
+            line-height: 50px;
+        }
+
+        .head .img {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 3px 6px rgba(115, 6, 6, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+
+            position: absolute;
+            right: 8px;
+            top: 5px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .labels {
+            height: 50px;
+            /*background-color: blue;*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 3px 6px rgba(97, 23, 8, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+
+        }
+
+        .labels .item {
+            /*border: 2px solid red;*/
+            padding: 0 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .labels .item span {
+            padding: 10px 0;
+            color: rgba(51, 51, 51, 0.6);
+            font-size: 16px;
+        }
+
+        .labels .item .active {
+            border-bottom: 2px solid red;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        .content {
+            height: 800px;
+            /*background-color: purple;*/
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content .menu {
+            width: 125px;
+            height: 600px;
+            /*background-color: yellow;*/
+            background-color: #FAF9F9;
+
+
+        }
+
+        .content .menu li {
+            /*border: 1px solid red;*/
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+            background-color: rgba(255, 224, 225, 1);
+
+            font-size: 16px;
+            color: rgba(102, 102, 102, 1);
+        }
+
+        .content .menu .active {
+            background-color: #FAF9F9;
+            border-left: 3px solid rgba(255, 131, 67, 1);
+            color: rgba(255, 131, 67, 1);
+        }
+
+        .content .menu .radius-rb {
+            border-radius: 0 0 30px 0;
+        }
+
+        .content .menu .radius-rt {
+            border-radius: 0 30px 0 0;
+        }
+
+        .content .goods {
+            width: 250px;
+            height: 600px;
+            /* background-color: rgb(255, 255, 255); */
+        }
+
+        .content .goods .xfg {
+            margin-top: 20px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content .goods .xfg img {
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+        }
+
+        .content .goods .xfg p {
+            left: 235px;
+            top: 168px;
+            width: 56px;
+            height: 17px;
+            opacity: 1;
+            /** 文本1 */
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 16.41px;
+            color: rgba(102, 102, 102, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+        .recommended{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .recommended-item{
+            margin-top: 20px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>筛选列表</h2>
+            <div class="img">
+                <img src="./img/search.png" alt="">
+            </div>
+        </div>
+        <div class="labels">
+            <div class="item">
+                <span class="active">首页</span>
+            </div>
+            <div class="item">
+                <span>首页</span>
+            </div>
+            <div class="item">
+                <span>首页</span>
+            </div>
+        </div>
+        <div class="content">
+            <ul class="menu">
+                <li class="radius-rb"></li>
+                <li class="active">精品</li>
+                <li class="radius-rt">分类1</li>
+                <li>分类2</li>
+                <li>精品</li>
+                <li>分类1</li>
+                <li>分类2</li>
+                <li></li>
+            </ul>
+            <div class="goods">
+                <div class="xfg"><img src="./img/xfg.png" alt="">
+                    <p>精选推荐</p>
+                </div>
+
+                <div class="recommended">
+                    
+                    <div class="recommended-item">
+                        <img src="./img/xej2.png" alt="">
+                        <p>耳机</p>
+                    </div>
+
+                    <div class="recommended-item">
+                        <img src="./img/xsh1.png" alt="">
+                        <p>智能手环</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xsj1.png" alt="">
+                        <p>智能手机</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xsb1.png" alt="">
+                        <p>鼠标</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xbjb.png" alt="">
+                        <p>笔记本</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xxj1.png" alt="">
+                        <p>相机</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xwrj1.png" alt="">
+                        <p>无人机</p>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="./img/xup1.png" alt="">
+                        <p>U盘</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
